@@ -1,0 +1,623 @@
+/* font-family: 'Noto Sans JP', sans-serif; */
+/* font-family: 'Lobster', cursive; */
+/* font-family: 'Acme', sans-serif; */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* HTML Tags */
+
+html {
+	scroll-behavior: smooth;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+.header a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: none;
+}
+
+footer {
+	padding: 4rem;
+	background-color: #021625;
+	color: #eee;
+	transition: background-color 0.3s ease-in-out;
+}
+
+footer:hover {
+	background-color: rgb(22, 31, 31);
+}
+
+footer hr {
+	background-color: #eee;
+}
+
+footer p {
+	font-family: "Noto Sans JP", sans-serif;
+}
+
+b {
+	font-weight: 900;
+}
+
+/* ID's */
+
+#navigation {
+	background-color: #a1cae2;
+	min-height: 100vh;
+	background: linear-gradient(
+			rgba(102, 101, 101, 0.151),
+			rgba(34, 33, 33, 0.555)
+		),
+		url("workers1.jpg");
+	background-size: cover;
+}
+
+#about {
+	background-color: #f7f2e7;
+	padding: 2rem;
+}
+
+#services-brief {
+	background-color: #d8d3cd;
+	padding: 2rem;
+}
+
+#CEO-message {
+	background-color: #f4f9f9;
+	padding: 2.5rem;
+}
+
+#licence-pic {
+	background-color: #797a7e;
+	padding: 2.5rem;
+	text-align: center;
+}
+
+#status {
+	width: 90%;
+	max-width: 500px;
+	text-align: center;
+	padding: 10px;
+	margin: 0 auto;
+	border-radius: 8px;
+	font-weight: 700;
+}
+
+#status.success {
+	background-color: rgb(211, 250, 153);
+	animation: status 4s ease forwards;
+}
+
+#status.error {
+	background-color: rgb(240, 68, 68);
+	color: white;
+	animation: status 3s ease forwards;
+}
+
+@keyframes status {
+	0% {
+		opacity: 1;
+		pointer-events: all;
+	}
+	90% {
+		opacity: 1;
+		pointer-events: all;
+	}
+	100% {
+		opacity: 0;
+		pointer-events: all;
+	}
+}
+
+/* --------------------------Classes------------------------ */
+
+/* Copied modal image */
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#myImg:hover {
+	opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #ccc;
+	padding: 10px 0;
+	height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+/* The Close Button */
+.close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+	.modal-content {
+		width: 100%;
+	}
+}
+
+/* ----------------------------------------- */
+
+/* Copied navbar */
+
+/* Style the header with a grey background and some padding */
+.header {
+	overflow: hidden;
+	background-color: #f1f1f149;
+	padding: 20px 10px;
+}
+
+/* Style the header links */
+.header a {
+	float: left;
+	color: black;
+	text-align: center;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 25px;
+	border-radius: 4px;
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+	background-color: rgba(221, 221, 221, 0.623);
+	color: black;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	font-weight: 700;
+}
+
+/* Style the active/current link*/
+.header a.active {
+	background-color: dodgerblue;
+	color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+	float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 768px) {
+	.header a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+	.header-right {
+		float: none;
+	}
+	.nav-button {
+		margin: 0 !important;
+	}
+	.floating-arrow {
+		visibility: hidden;
+	}
+}
+
+/* -------------------- */
+
+.img-logo {
+	margin: 0 1rem 0 1rem;
+	height: 5.5rem;
+}
+
+.nav-button {
+	font-size: 1rem !important;
+	font-weight: 500;
+	margin: 1rem 1rem 0 1rem;
+	color: rgb(175, 8, 8);
+	padding: 0.5rem !important;
+	border-radius: 20px;
+	font-family: "Noto Sans JP", sans-serif;
+}
+
+.floating-arrow {
+	position: absolute;
+	bottom: 5rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.intro {
+	background-color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.intro-text {
+	color: aliceblue;
+	font-family: "Noto Sans JP", sans-serif;
+}
+
+.text {
+	font-weight: 800;
+	font-size: 5rem;
+}
+
+.slider {
+	background-color: rgb(23, 59, 117);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateY(100%);
+}
+
+.hide {
+	background: black;
+	overflow: hidden;
+}
+.hide span {
+	transform: translateY(100%);
+	display: inline-block;
+}
+
+.middle-text {
+	font-size: 3.5rem;
+	font-family: "Acme", sans-serif;
+	background: whitesmoke;
+	background-clip: border-box;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-align: center;
+	padding-top: 14rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	font-weight: 900;
+}
+
+.display-4 {
+	font-size: 3rem;
+	font-weight: bolder;
+	font-family: "Lobster", cursive;
+	padding-bottom: 1rem;
+}
+
+.lead {
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 2rem;
+	margin: 1rem;
+}
+
+.my-rule {
+	margin: 3rem auto;
+	border-top: 5px dotted rgba(0, 0, 0, 0.473);
+	width: 15rem;
+}
+
+.text-in-col {
+	margin: 2rem;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1.5rem;
+}
+
+.custom-btn {
+	border-radius: 40% !important;
+	font-size: 25px !important;
+	font-family: "Lobster", cursive;
+}
+
+.company-name {
+	font-family: "Lobster", cursive;
+	font-size: 2.4rem;
+	color: rgb(33, 77, 199);
+	transition: text-shadow 0.3s ease-in-out;
+}
+
+.company-name:hover {
+	color: rgb(10, 75, 252);
+	text-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+}
+
+.info-footer {
+	font-family: "Lobster", cursive;
+	font-size: 2.4rem;
+}
+
+.CEO-message-text {
+	font-size: 1.5rem;
+	font-family: "Noto Sans JP", sans-serif;
+	padding: 5rem 3rem 5rem 3rem;
+}
+
+.CEO-message-image {
+	height: 20rem;
+	width: auto;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+#CEO-message .row {
+	padding: 3rem;
+	font-family: "Noto Sans JP", sans-serif;
+}
+
+.CEO-name {
+	padding: 1rem;
+}
+
+.custom-bold {
+	color: rgb(10, 75, 252);
+	transition: text-shadow 0.3s ease-in-out;
+}
+.custom-bold:hover {
+	text-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+}
+
+.hover-box {
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.hover-box:hover {
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.power-attorney {
+	background-color: #f4f9f9;
+	padding: 3rem;
+}
+
+.handshake-image {
+	height: 25rem;
+	width: 25rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+/* Contact Us page complete except navbar and footer */
+
+.contact {
+	position: relative;
+	min-height: 100vh;
+	padding: 50px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #d8d3cd;
+}
+
+.contact .content {
+	max-width: 800px;
+	text-align: center;
+}
+
+.contact .content h2 {
+	font-size: 50px;
+	font-weight: 500;
+	font-family: "Lobster", cursive;
+}
+
+.contact .content p {
+	font-size: 36;
+	font-weight: 300;
+	font-family: "Noto Sans JP", sans-serif;
+}
+
+.custom-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.custom-container .contactInfo {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+.custom-container .contactInfo .box {
+	position: relative;
+	padding: 20px 0;
+	display: flex;
+}
+
+.custom-container .contactInfo .box .icon {
+	min-width: 60px;
+	height: 60px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 22px;
+}
+
+.custom-container .contactInfo .box .text {
+	display: flex;
+	margin-left: 20px;
+	font-size: 20px;
+	flex-direction: column;
+	font-weight: 300;
+}
+
+.custom-container .contactInfo .box .text h3 {
+	font-weight: 500;
+	color: #00bcd4;
+	font-family: "Lobster", cursive;
+}
+
+.custom-container .contactInfo .box .text p {
+	font-weight: 300;
+	font-family: "Noto Sans JP", sans-serif;
+}
+
+.contactForm {
+	width: 40%;
+	padding: 40px;
+	background: #fff;
+}
+
+.contactForm h2 {
+	font-size: 30px;
+	color: #333;
+	font-weight: 500;
+}
+
+.contactForm .inputBox {
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+	width: 100%;
+	padding: 5% 0;
+	font-size: 16px;
+	margin: 10px 0;
+	border: none;
+	border-bottom: 2px solid #333;
+	outline: none;
+	resize: none;
+}
+
+.contactForm .inputBox span {
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	pointer-events: none;
+	transition: 0.5s;
+	color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+	color: #e91e63;
+	font-size: 12px;
+	transform: translateY(-20%);
+}
+
+.form-button {
+	width: 100px;
+	background: #00bcd4;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 18px;
+}
+
+@media (max-width: 991px) {
+	.contact {
+		padding: 50px;
+	}
+	.custom-container {
+		flex-direction: column;
+	}
+	.custom-container .contactInfo {
+		margin-bottom: 40px;
+	}
+	.custom-container .contactInfo,
+	.contactForm {
+		width: 100%;
+	}
+}
+
+.thankyou_message b {
+	font-family: "Lobster", cursive;
+}
